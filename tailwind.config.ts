@@ -17,11 +17,16 @@ export default {
   prefix: "",
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "xl": "1400px",
       },
+    },
+    screens:{
+      'sm':'640px',
+      'md':'768px',
+      'lg':'1024px',
+      'xl':'1441px',
+      '2xl':'1536px',
     },
     extend: {
       fontFamily:{
@@ -33,20 +38,15 @@ export default {
         },
         secondary:"#FF4D00"
       },
-      animation: {
-        spotlight: "spotlight 2s ease .75s 1 forwards",
-      },
       keyframes: {
-        spotlight: {
-          "0%": {
-            opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translate(-50%,-40%) scale(1)",
-          },
+        breathe: {
+          '0%': { borderColor: 'transparent', boxShadow: '0 0 10px rgba(0, 0, 255, 0)' },
+          '75%': { borderColor: '#FF4D00', boxShadow: '0 0 20px #FF4D00' },
+          '100%': { borderColor: 'transparent', boxShadow: '0 0 10px rgba(0, 0, 255, 0)' },
         },
+      },
+      animation: {
+        breathe: 'breathe 1.5s ease-in-out infinite',
       },
     },
   },

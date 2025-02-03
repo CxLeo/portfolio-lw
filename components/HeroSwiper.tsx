@@ -7,10 +7,10 @@ const data = ["Full Stack Developer", "Dedicated Programmer"];
 
 function HomeHeroSwiper() {
   return (
-    <div className='flex flex-row mt-2'>
-        <span className='font-code font-bold lg:leading-[60px] lg:text-[60px] text-[40px] leading-[40px]'>{'{ '}</span>
+    <div className='flex flex-row mt-2 w-fit'>
+        <span className='font-code font-bold lg:leading-[60px] lg:text-[60px] text-[40px] leading-[40px]'>{'{'}</span>
         <Swiper
-            className='rounded-lg  max-h-[140px]'
+            className='rounded-lg  max-h-[140px] '
             spaceBetween={20}
             slidesPerView={1}  
             loop
@@ -34,14 +34,14 @@ function HomeHeroSwiper() {
             {data.map((text,idx)=>(
                 <SwiperSlide key={text+idx}>
                 <div className="w-fit h-fit">
-                     <p className='font-code font-bold lg:leading-[60px] lg:text-[60px] text-[40px] leading-[40px] text-secondary'>
+                     <p className='font-code font-bold lg:leading-[60px] lg:text-[60px] text-[30px] leading-[40px] text-secondary'>
                         {text}
                         </p>
                 </div>
             </SwiperSlide>
             ))} 
         </Swiper>
-        <span className='font-code font-bold lg:leading-[60px] lg:text-[60px] text-[40px] leading-[40px]'>{' }'}</span>
+        <span className='font-code font-bold lg:leading-[60px] lg:text-[60px] text-[40px] leading-[40px]'>{'}'}</span>
     </div>
   )
 }
