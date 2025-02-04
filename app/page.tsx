@@ -1,5 +1,6 @@
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="lg:max-w-7xl xl:max-w-full w-full">
         <Hero/>
         <Experience/>
+        <Skills/>
       </div>
     </main>
     
